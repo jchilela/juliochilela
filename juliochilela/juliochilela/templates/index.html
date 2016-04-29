@@ -25,10 +25,11 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+    <script src="{% static 'js/contact_me.js' %}"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
@@ -450,7 +451,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contactForm"   action="MAILTO:juliochilela@gmail.com" method="post" enctype="text/plain" >
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -475,10 +476,115 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Enviar Mensagem</button>
+                                <a  class="btn btn-xl" onclick="submit();">Enviar Mensagem</a>
                             </div>
                         </div>
                     </form>
+
+
+
+
+<p><form name="contactform" method="post" action="http://52.89.105.19/send_form_email.php">
+ 
+<table width="450px">
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="first_name">First Name *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="first_name" maxlength="50" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="last_name">Last Name *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="last_name" maxlength="50" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="email">Email Address *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="email" maxlength="80" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="telephone">Telephone Number</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <input  type="text" name="telephone" maxlength="30" size="30">
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td valign="top">
+ 
+  <label for="comments">Comments *</label>
+ 
+ </td>
+ 
+ <td valign="top">
+ 
+  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+ 
+ </td>
+ 
+</tr>
+ 
+<tr>
+ 
+ <td colspan="2" style="text-align:center">
+ 
+  <input type="submit" value="Submit">   <a href="" onclick="submit();">Email Form</a>
+ 
+ </td>
+ 
+</tr>
+ 
+</table>
+ 
+</form></p>
+
+
+
+
                 </div>
             </div>
         </div>

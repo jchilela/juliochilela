@@ -5,3 +5,8 @@ from django.http import  HttpResponse,HttpResponseRedirect
 def index(request):
 	template = 'index.html'
 	return render(request,template)
+
+
+def mqtt(request):
+	template = 'mqtt.html'
+	return render(request,template)
