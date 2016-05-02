@@ -11,11 +11,11 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 $message = $_POST['message'];
-$today = date_default_timezone_set('UTC');
+$today = $_POST['hoje'];
 
 $con = pg_connect("host=$host dbname=$db user=$user password=$pass") or die ('Could not connect to server\n' . pg_last_error()); 
 
-$query = "INSERT INTO contact  VALUES ('$name', '$phone','$email','$message','today')";
+$query = "INSERT INTO contact  VALUES (DEFAULT,'$name', '$phone','$email','$message','today')";
 $result = pg_query($query) or die('Cannot execute query: $query\n' . pg_last_error()); 
 
 
