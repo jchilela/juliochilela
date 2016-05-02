@@ -1,4 +1,4 @@
-function submit(){
+function submeter(){
   $(function(){
 
             var name = document.getElementById("name").value;
