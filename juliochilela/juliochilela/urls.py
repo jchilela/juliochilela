@@ -7,8 +7,8 @@ from django.contrib import admin
 
 urlpatterns = [
     # Examples:
-     url(r'^$', 'juliochilela.views.index', name='index'),
-     url(r'^mqtt/', 'juliochilela.views.mqtt', name='mqtt'),
+     url(r'^$', 'juliochilela.views.en', name='en'),
+     url(r'^pt/', 'juliochilela.views.pt', name='pt'),
 
     # url(r'^blog/', include('blog.urls')),
 

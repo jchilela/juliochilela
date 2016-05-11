@@ -2,8 +2,12 @@ from django.shortcuts import render
 from django.http import  HttpResponse,HttpResponseRedirect
 
 
-def index(request):
-	template = 'index.html'
+def en(request):
+	template = 'en.html'
+	return render(request,template)
+
+def pt(request):
+	template = 'pt.html'
 	return render(request,template)
 
 
