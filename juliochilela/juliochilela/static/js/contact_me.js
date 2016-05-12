@@ -7,12 +7,12 @@ function submeter(){
             var message = document.getElementById("message").value;
             var hoje = Date();
 
-
+alert("Thank you");
 
             
     $.ajax({
       type: "POST",
-      url: 'http://localhost/contact_me.php',
+      url: 'http://52.89.105.19/contact_me.php',
       data: ({name: name, email: email, phone: phone, message: message, hoje: hoje}),
       success: function(data) {
        
@@ -20,6 +20,15 @@ function submeter(){
 
     });
   });
+
+limpar();
+}
+
+function limpar(){
+document.getElementById("name").value="";
+document.getElementById("email").value="";
+ document.getElementById("phone").value="";
+ document.getElementById("message").value="";
 
 
 }

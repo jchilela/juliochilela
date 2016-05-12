@@ -9,6 +9,8 @@ urlpatterns = [
     # Examples:
      url(r'^$', 'juliochilela.views.en', name='en'),
      url(r'^pt/', 'juliochilela.views.pt', name='pt'),
+     url(r'^login/', 'juliochilela.views.login', name='login'),
+
 
     # url(r'^blog/', include('blog.urls')),
 
